@@ -1,29 +1,57 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
+
+.container {
     width: 80%;
     margin: 0px auto;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: space-between;
 }
-.header{
+
+.header {
     background-color: aquamarine;
     padding: 10px 0px;
 }
-.logo{
+
+.logo {
     font-weight: 600;
 }
-.navbar ul{
+
+.navbar ul {
     list-style-type: none;
     display: flex;
 }
-.navbar ul li{
+
+.navbar ul li {
     margin: 0px 2px;
     padding: 0px 2px;
+
+}
+
+.mainbanner {
+    background-color: rgb(0, 34, 255);
+}
+
+.banner-info {
+    width: 50%;
+}
+
+.search-form {
+    margin: 50px auto;
+}
+
+.search-form input {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 50%;
+    padding: 2px;
+    margin: 2px;
+    
 }

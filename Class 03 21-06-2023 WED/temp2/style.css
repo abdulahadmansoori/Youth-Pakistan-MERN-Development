@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    background-color: aquamarine;
+    padding: 10px 0px;
+}
+.logo{
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+}
+.navbar ul li{
+    margin: 0px 2px;
+    padding: 0px 2px;
+}

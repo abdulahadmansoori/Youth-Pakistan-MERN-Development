@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.header{
+    background: #ee9e9e;
+    padding: 10px 0px;
+}
+.flex{
+    display: flex;
+}
+.logo{
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:center ;
+}
+.navbar ul li{
+    padding: 0px 2px;
+    margin: 0px 2px;
+}
+.navbar{
+    flex-grow: 1;
+}
+.account a{
+    text-decoration: none;
+    color: black; 
+    border: 1px solid black;
+    padding: 2px 4px;
+    margin: 0px 2px;
+}
+.mainbanner{
+ background-image: url(https://th.bing.com/th/id/OIP.Jek3CDQGyU5V2g3mChz8wQHaE-?pid=ImgDet&rs=1);
+ background-position: center;
+ background-size: cover;
+ height: 500px;
+}
+
+/* ----------------------------- */
+.grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.grid-item{
+    background-color: aquamarine;
+    text-align: center;
+    font-size: 255px;
+    margin: 2px;
+    height: 500px;
+}

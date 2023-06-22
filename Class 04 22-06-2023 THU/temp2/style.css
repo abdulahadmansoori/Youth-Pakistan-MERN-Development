@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: aquamarine;
+    padding: 10px 0px;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0px 2px;
+    padding: 0px 2px;
+
+}
+
+/* .mainbanner {
+    background-color: rgb(0, 34, 255);
+}
+
+.banner-info {
+    width: 50%;
+}
+
+.search-form {
+    margin: 50px auto;
+}
+
+.search-form input {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 50%;
+    padding: 2px;
+    margin: 2px;
+    
+} */
+.mainbanner{
+    margin: 10%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.grid-item{
+    margin: 25px;
+}
+.grid-item img{
+    width: 100%;
+    border-radius: 10px;
+}
+.grid-item h3{
+    color: blue;
+}
+.grid-item h1{
+    font-size: 30px;
+    margin: 25px 0px;
+}
+.grid-item p{
+    font-size: 13px;
+    color: rgb(147, 146, 146);
+}
+.duration{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.star{
+    color: rgb(249, 220, 32);
+}
+.book-now{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn-icon{
+    margin: 0px 4px;
+}
+.options{
+    margin: 10px 0px;
+}
+.price{
+    font-size: 25px;
+    font-weight: 500;
+    color: blue;
+}

@@ -1,0 +1,11 @@
+.div{
+    width: 200px;
+    height: 200px;
+    background: #cfa5a5;
+    text-align: center;
+    justify-content: center;
+    margin: 2px;
+}
+.flex{
+    display: flex;
+}

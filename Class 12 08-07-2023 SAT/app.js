@@ -1,65 +1,15 @@
-// const getProducts = async () => {
-//     const response = await fetch('https://dummyjson.com/products');
-//     const myJson = await response.json();
-//     console.log(myJson);
-//     renderProducts(myJson);
-//   };
 
-//   let renderProducts = (data) => {
-//     const productsRow = document.getElementById("productsRow");
-
-//     data.products.forEach(product => {
-//       const productElement = document.createElement("div");
-//       productElement.classList.add("col-md-3");
-//       productElement.classList.add("my-2");
-//       productElement.innerHTML = `
-//         <div class="product border">
-//           <img src="${product.thumbnail}" alt="" class="w-100">
-//           <h3 class="h5 ms-2">${product.title}</h3>
-//           <div class="stars ms-2">
-//             <i class="bi bi-star-fill"></i>
-//             <i class="bi bi-star-fill"></i>
-//             <i class="bi bi-star-fill"></i>
-//             <i class="bi bi-star-fill"></i>
-//             <i class="bi bi-star-fill"></i>
-//           </div>
-//           <p class="ms-2">(${product.rating})</p>
-//           <p class="fw-bolder h5 ms-2">$ ${product.price}</p>
-//           <button class="btn btn-success m-2" onclick="addToCart(${product.id})">add to cart <i class="bi bi-cart-plus"></i></button>
-//         </div>
-//       `;
-//       productsRow.appendChild(productElement);
-//     });
-//   };
-
-//   getProducts();
-
-//   let addToCart = (event) => {
-//     event.preventDefault();
-//   };
-
-
-
-
-
-
-// json xml
-// API
-// fetch()
-
-// {
-
-// }
-// let functionName = async () => {
-
-// }
-
+let products;
 let getProducts = async () => {
     let products = await fetch("https://dummyjson.com/products");
     let response = await products.json();
+    // products = await response.products;
     // console.log(response.products);
+    localStorage.setItem("products", JSON.stringify(response.products))
     productsRendering(response.products);
 }
+
+
 
 let productsRendering = (data) => {
     // console.log(data);
@@ -72,7 +22,7 @@ let productsRendering = (data) => {
         product.innerHTML = `
         <div class="product border">
                   <img src="${p.thumbnail}" alt="" class="w-100">
-                  <h5 class="ms-2">${p.title}</h5>
+                  <h5 class="ms-2"><a href="./productDetails.html?pid=${p.id}">${p.title}</a></h5>
                   <div class="stars ms-2 text-success">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -92,9 +42,30 @@ let productsRendering = (data) => {
 }
 getProducts();
 let cart = [];
-let addToCart = (id) => { 
+let addToCart = (id) => {
     event.preventDefault();
-    cart.push(id);
-    alert("product add " + id)
+    // alert("product add " + id);
+    let product = JSON.parse(localStorage.getItem("products"));
+    cart.push(product[id]);
+    console.log(product[id]);
+    renderCartItems();
 }
-console.log(cart);
+
+let renderCartItems = () => {
+    document.getElementById("cartItems").innerHTML = "";
+    let cartItems = document.getElementById("cartItems");
+    cart.forEach(product => {
+        cartItems.innerHTML += `
+            <div class="d-flex justify-content-between">
+                <img src="${product.thumbnail}" class="w-25" alt="">
+                <h5 class=" mt-3">${product.title}</h5>
+                <p class=" mt-3">${product.price}</p>
+                <i class="bi bi-x mt-3"></i>
+             </div>
+        `
+    });
+    console.log(cart);
+}
+
+// console.log(cart);
+
